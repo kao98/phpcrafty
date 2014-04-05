@@ -3,7 +3,6 @@
 namespace tests\unit;
 
 require_once('../../lib/Crafty/ComponentFactory.php');
-require_once('../../lib/Crafty/ComponentReflector.php');
 require_once(__DIR__ . '/_fakes/EmptyClass.php');
 require_once(__DIR__ . '/_fakes/ConstructorInjectionClass.php');
 require_once(__DIR__ . '/_fakes/SetterInjectionClass.php');

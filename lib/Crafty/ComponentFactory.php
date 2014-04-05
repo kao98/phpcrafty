@@ -5,6 +5,7 @@ require_once dirname(__FILE__) . '/ComponentReference.php';
 require_once dirname(__FILE__) . '/ComponentSpec.php';
 require_once dirname(__FILE__) . '/ComponentSpecFinder.php';
 require_once dirname(__FILE__) . '/ComponentFactoryException.php';
+require_once dirname(__FILE__) . '/ComponentReflector.php';
 
 /**
  * A factory class for the dependency injection container.
