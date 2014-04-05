@@ -1,3 +1,4 @@
+#!/usr/bin/env php ./Tester-1.1/Tester/tester
 <?php
 
 /* 
@@ -19,9 +20,9 @@
 /*
  * Functional tests use Nette Tester v1.1.
  * The Nette Tester is provided in it 1.1.0 version.
- * To run the tests, from the tests/functional directory, into a shell,
+ * To run the tests, from the 'tests/functional' directory,
  * simply run the following command:
- * #php Tester-1.1\Tester\tester Crafty
+ * #>php Tester-1.1/Tester/tester Crafty
  */
 
 require_once __DIR__ . '/../../../bootstrap.php';
