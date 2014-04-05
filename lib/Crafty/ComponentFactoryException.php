@@ -1,11 +1,13 @@
 <?php
 
+namespace Knt\Crafty;
+
 /**
  * An exception thrown when an error occurs in the ComponentFactory/DI container.
  * @author Chris Corbyn
  * @package Crafty
  */
-class Crafty_ComponentFactoryException extends Exception
+class ComponentFactoryException extends \Exception
 {
   
   /**

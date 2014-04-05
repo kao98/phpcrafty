@@ -1,6 +1,8 @@
 <?php
 
-require_once dirname(__FILE__) . '/ClassLocator.php';
+namespace Knt\Crafty;
+
+require_once dirname(__FILE__) . '/ClassLocator/ClassLocatorInterface.php';
 require_once dirname(__FILE__) . '/ComponentReference.php';
 require_once dirname(__FILE__) . '/ComponentSpec.php';
 require_once dirname(__FILE__) . '/ComponentSpecFinder.php';
@@ -14,24 +16,24 @@ require_once dirname(__FILE__) . '/ComponentReflector.php';
  * @author Chris Corbyn
  * @package Crafty
  */
-class Crafty_ComponentFactory
+class ComponentFactory
 {
   
   /**
    * ComponentSpec collection.
-   * @var Crafty_ComponentSpec[]
+   * @var ComponentSpec[]
    */
   private $_specs = array();
   
   /**
    * ClassLocator collection.
-   * @var Crafty_ClassLocator[]
+   * @var ClassLocator[]
    */
   private $_classLocators = array();
   
   /**
    * ComponentSpecFinder collection.
-   * @var Crafty_ComponentSpecFinder[]
+   * @var ComponentSpecFinder[]
    */
   private $_specFinders = array();
   
@@ -43,23 +45,23 @@ class Crafty_ComponentFactory
   
   /**
    * Creates a new instance of the ComponentSpec class.
-   * @return Crafty_ComponentSpec
+   * @return ComponentSpec
    */
   public function newComponentSpec($className = null, $constructorArgs = array(),
     $properties = array(), $shared = false)
   {
-    return new Crafty_ComponentSpec($className, $constructorArgs, $properties,
+    return new ComponentSpec($className, $constructorArgs, $properties,
       $shared);
   }
   
   /**
    * Creates a new ComponentReference for the given $componentName.
    * @param string $componentName
-   * @return Crafty_ComponentReference
+   * @return ComponentReference
    */
   public function referenceFor($componentName)
   {
-    return new Crafty_ComponentReference($componentName);
+    return new ComponentReference($componentName);
   }
   
   /**
@@ -67,20 +69,20 @@ class Crafty_ComponentFactory
    * properties.
    * @param string $className
    * @param mixed[] $properties
-   * @return Crafty_ComponentReflector
+   * @return ComponentReflector
    * @access private
    */
   private function _newComponentReflector($className, array $properties)
   {
-    return new Crafty_ComponentReflector($className, $properties);
+    return new ComponentReflector($className, $properties);
   }
   
   /**
    * Sets the specification for the given $componentName.
    * @param string $componentName
-   * @param Crafty_ComponentSpec The specification for $componentName
+   * @param ComponentSpec The specification for $componentName
    */
-  public function setComponentSpec($componentName, Crafty_ComponentSpec $spec)
+  public function setComponentSpec($componentName, ComponentSpec $spec)
   {
     $this->_specs[$componentName] = $spec;
   }
@@ -88,8 +90,8 @@ class Crafty_ComponentFactory
   /**
    * Gets the specification for the given $componentName.
    * @param string $componentName
-   * @return Crafty_ComponentSpec
-   * @throws Crafty_ComponentFactoryException If spec is not found
+   * @return ComponentSpec
+   * @throws ComponentFactoryException If spec is not found
    */
   public function getComponentSpec($componentName)
   {
@@ -108,7 +110,7 @@ class Crafty_ComponentFactory
       
       if (!$spec)
       {
-        throw new Crafty_ComponentFactoryException(
+        throw new ComponentFactoryException(
           $componentName . ' does not exist');
       }
     }
@@ -119,9 +121,9 @@ class Crafty_ComponentFactory
   /**
    * Register a new ClassLocator for finding and loading class files.
    * @param string $key
-   * @param Crafty_ClassLocator The ClassLocator to register
+   * @param ClassLocator The ClassLocator to register
    */
-  public function registerClassLocator($key, Crafty_ClassLocator $locator)
+  public function registerClassLocator($key, \Knt\Crafty\ClassLocator\ClassLocatorInterface $locator)
   {
     $this->_classLocators[$key] = $locator;
   }
@@ -129,9 +131,9 @@ class Crafty_ComponentFactory
   /**
    * Registers a new ComponentSpec finder in this factory.
    * @param string $key
-   * @param Crafty_ComponentSpecFinder The spec finder instance
+   * @param ComponentSpecFinder The spec finder instance
    */
-  public function registerSpecFinder($key, Crafty_ComponentSpecFinder $finder)
+  public function registerSpecFinder($key, ComponentSpecFinder $finder)
   {
     $this->_specFinders[$key] = $finder;
   }
@@ -144,7 +146,7 @@ class Crafty_ComponentFactory
    */
   private function _isDependency($input)
   {
-    return ($input instanceof Crafty_ComponentReference);
+    return ($input instanceof ComponentReference);
   }
   
   /**
@@ -183,7 +185,7 @@ class Crafty_ComponentFactory
    * Get a ReflectionClass decorated to provide setter-based injection
    * components during instantiation.
    * @param string $componentName
-   * @return Crafty_ComponentReflector
+   * @return ComponentReflector
    */
   public function classOf($componentName)
   {

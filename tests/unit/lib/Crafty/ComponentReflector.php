@@ -1,18 +1,21 @@
 <?php
 
-namespace tests\unit;
+namespace Knt\Crafty\tests\unit;
 
 require_once('../../lib/Crafty/ComponentReflector.php');
 require_once(__DIR__ . '/_fakes/HybridInjectionClass.php');
 
-use atoum;
+use 
+    atoum,
+    Knt\Crafty
+;
 
-class Crafty_ComponentReflector extends atoum {
+class ComponentReflector extends atoum {
 
     public function testReflectorIsReflectionClass() {
         
         $this
-            ->object(new \Crafty_ComponentReflector(
+            ->object(new Crafty\ComponentReflector(
                     'HybridInjectionClass',
                     array('prop3' => 'def')
                 )
@@ -25,7 +28,7 @@ class Crafty_ComponentReflector extends atoum {
 
     public function testNewsInstanceType() {
         
-        $reflector = new \Crafty_ComponentReflector(
+        $reflector = new Crafty\ComponentReflector(
             'HybridInjectionClass',
             array('prop3' => 'def')
         );
@@ -39,7 +42,7 @@ class Crafty_ComponentReflector extends atoum {
     
     public function testNewsInstanceArgs() {
         
-        $reflector = new \Crafty_ComponentReflector(
+        $reflector = new Crafty\ComponentReflector(
             'HybridInjectionClass',
             array('prop3' => 'def')
         );

@@ -1,11 +1,13 @@
 <?php
 
+namespace Knt\Crafty;
+
 /**
  * Provides information about a component referenced within the DI container.
  * @author Chris Corbyn
  * @package Crafty
  */
-class Crafty_ComponentReference
+class ComponentReference
 {
   
   /**

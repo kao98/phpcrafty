@@ -1,27 +1,30 @@
 <?php
 
-namespace tests\unit;
+namespace Knt\Crafty\tests\unit;
 
 require_once('../../lib/Crafty/ComponentFactory.php');
 require_once(__DIR__ . '/_fakes/EmptyClass.php');
 require_once(__DIR__ . '/_fakes/ConstructorInjectionClass.php');
 require_once(__DIR__ . '/_fakes/SetterInjectionClass.php');
 
-use atoum;
+use 
+    atoum,
+    Knt\Crafty
+;
 
-class Crafty_ComponentFactory extends atoum {
+class ComponentFactory extends atoum {
     
     private $_factory;
     
     public function beforeTestMethod($method) {
-        $this->_factory = new \Crafty_ComponentFactory();
+        $this->_factory = new Crafty\ComponentFactory();
     }
     
     public function testNewComponentSpec() {
 
         $this
             ->object($this->_factory->newComponentSpec())
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
         ;
         
     }
@@ -37,7 +40,7 @@ class Crafty_ComponentFactory extends atoum {
                     true                    //Shared instance
                 )
             )
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
             
                 ->string($spec->getClassName())
                     ->isEqualTo('SomeClass')
@@ -58,7 +61,7 @@ class Crafty_ComponentFactory extends atoum {
         
         $this
             ->object($ref = $this->_factory->referenceFor('test'))
-                ->isInstanceOf('Crafty_ComponentReference')
+                ->isInstanceOf('\Knt\Crafty\ComponentReference')
             
                 ->string($ref->getComponentName())
                     ->isEqualTo('test')
@@ -91,8 +94,8 @@ class Crafty_ComponentFactory extends atoum {
         
         $this->_factory->setComponentSpec('testClass', $spec);
         
-        $locator1 = new \mock\Crafty_ClassLocator;
-        $locator2 = new \mock\Crafty_ClassLocator;
+        $locator1 = new \mock\Knt\Crafty\ClassLocator\ClassLocatorInterface;
+        $locator2 = new \mock\Knt\Crafty\ClassLocator\ClassLocatorInterface;
         
         $locator1->getMockController()->classExists = false;
         $locator2->getMockController()->classExists = true;
@@ -132,7 +135,7 @@ class Crafty_ComponentFactory extends atoum {
         $this
             
             ->object($this->_factory->classOf('test'))
-                ->isInstanceOf('Crafty_ComponentReflector')
+                ->isInstanceOf('\Knt\Crafty\ComponentReflector')
             
         ;
         
@@ -316,7 +319,7 @@ class Crafty_ComponentFactory extends atoum {
                     $this->_factory->create('noSuchComponent');
                 }
             )
-                ->isInstanceOf('Crafty_ComponentFactoryException')
+                ->isInstanceOf('\Knt\Crafty\ComponentFactoryException')
                 
         ;
         
@@ -326,9 +329,9 @@ class Crafty_ComponentFactory extends atoum {
         $spec = $this->_factory->newComponentSpec();
         $spec->setClassName('stdClass');
         
-        $finder1 = new \mock\Crafty_ComponentSpecFinder;
-        $finder2 = new \mock\Crafty_ComponentSpecFinder;
-        $finder3 = new \mock\Crafty_ComponentSpecFinder;
+        $finder1 = new \mock\Knt\Crafty\ComponentSpecFinder;
+        $finder2 = new \mock\Knt\Crafty\ComponentSpecFinder;
+        $finder3 = new \mock\Knt\Crafty\ComponentSpecFinder;
         
         $finder1->getMockController()->findSpecFor = null;
         $finder2->getMockController()->findSpecFor = $spec;

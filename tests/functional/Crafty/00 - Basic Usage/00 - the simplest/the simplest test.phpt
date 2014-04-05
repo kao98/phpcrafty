@@ -65,7 +65,7 @@ class simplestTest extends Tester\TestCase {
     public function test_00_Factory_Create_StdClass() {
     
     //Given
-        $crafty = new \Crafty_ComponentFactory;
+        $crafty = new \Knt\Crafty\ComponentFactory;
         $spec   = $crafty->newComponentSpec('stdClass');
         
         $crafty ->setComponentSpec  ('std', $spec);
@@ -74,7 +74,7 @@ class simplestTest extends Tester\TestCase {
         $object = $crafty->create('std');
         
     //Then
-        Assert::type('Crafty_ComponentFactory', $crafty);
+        Assert::type('\Knt\Crafty\ComponentFactory', $crafty);
         Assert::type('stdClass', $object);
         
     }

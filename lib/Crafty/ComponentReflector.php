@@ -1,11 +1,13 @@
 <?php
 
+namespace Knt\Crafty;
+
 /**
  * Reflection class which knows about setter based injection depedencies.
  * @package Crafty
  * @author Chris Corbyn
  */
-class Crafty_ComponentReflector extends ReflectionClass
+class ComponentReflector extends \ReflectionClass
 {
   
   /**

@@ -1,5 +1,7 @@
 <?php
 
+namespace Knt\Crafty;
+
 require_once dirname(__FILE__) . '/../ComponentFactory.php';
 require_once dirname(__FILE__) . '/../ComponentSpecFinder.php';
 
@@ -8,8 +10,8 @@ require_once dirname(__FILE__) . '/../ComponentSpecFinder.php';
  * @author Chris Corbyn
  * @package Crafty
  */
-class Crafty_ComponentSpecFinder_ArraySpecFinder
-  implements Crafty_ComponentSpecFinder
+class ComponentSpecFinder_ArraySpecFinder
+  implements ComponentSpecFinder
 {
   
   /**
@@ -50,10 +52,10 @@ class Crafty_ComponentSpecFinder_ArraySpecFinder
   /**
    * Flatten out all array values from the spec into their single values.
    * @param array $input
-   * @param Crafty_ComponentFactory $factory
+   * @param ComponentFactory $factory
    * @return array
    */
-  private function _flatten(array $input, Crafty_ComponentFactory $factory)
+  private function _flatten(array $input, ComponentFactory $factory)
   {
     $ret = array();
     foreach ($input as $k => $v)
@@ -104,10 +106,10 @@ class Crafty_ComponentSpecFinder_ArraySpecFinder
    * Find and create the ComponentSpec for the given $componentName.
    * Returns NULL if no ComponentSpec can be found.
    * @param string $componentName
-   * @param Crafty_ComponentFactory $factory
-   * @return Crafty_ComponentSpec
+   * @param ComponentFactory $factory
+   * @return ComponentSpec
    */
-  public function findSpecFor($componentName, Crafty_ComponentFactory $factory)
+  public function findSpecFor($componentName, ComponentFactory $factory)
   {
     //Look for component in the array
     if (isset($this->_list[$componentName]))

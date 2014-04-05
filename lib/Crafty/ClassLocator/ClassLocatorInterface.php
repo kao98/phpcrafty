@@ -1,11 +1,13 @@
 <?php
 
+namespace Knt\Crafty\ClassLocator;
+
 /**
  * ClassLocator interface for searching for and including class files.
  * @author Chris Corbyn
  * @package Crafty
  */
-interface Crafty_ClassLocator
+interface ClassLocatorInterface
 {
   
   /**

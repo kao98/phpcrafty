@@ -1,16 +1,19 @@
 <?php
 
-namespace tests\unit;
+namespace Knt\Crafty\tests\unit;
 
 require_once('../../lib/Crafty/ComponentSpec.php');
 
-use atoum;
+use 
+    atoum,
+    Knt\Crafty
+;
 
-class Crafty_ComponentSpec extends atoum {
+class ComponentSpec extends atoum {
 
     public function testSetAndGetClassName() {
         
-        $spec = new \Crafty_ComponentSpec();
+        $spec = new Crafty\ComponentSpec();
         $spec->setClassName('EmptyClass');
         
         $this
@@ -23,7 +26,7 @@ class Crafty_ComponentSpec extends atoum {
     public function testSetAndGetConstructorArgs() {
         
         $o      = new \stdClass();
-        $spec   = new \Crafty_ComponentSpec();
+        $spec   = new Crafty\ComponentSpec();
         $args   = array($o, 'foo', 123);
         
         $spec->setConstructorArgs($args);
@@ -39,7 +42,7 @@ class Crafty_ComponentSpec extends atoum {
         
         $o      = new \stdClass();
         $arr    = array('one', 2, '3');
-        $spec   = new \Crafty_ComponentSpec();
+        $spec   = new Crafty\ComponentSpec();
         
         $o->foo = 'bar';
         
@@ -63,7 +66,7 @@ class Crafty_ComponentSpec extends atoum {
     
     public function testGetProperties() {
         
-        $spec   = new \Crafty_ComponentSpec();
+        $spec   = new Crafty\ComponentSpec();
         
         $spec->setProperty('testProp1', 'x');
         $spec->setProperty('testProp2', 'y');
@@ -84,7 +87,7 @@ class Crafty_ComponentSpec extends atoum {
     
     public function testSetAndGetShared() {
         
-        $spec   = new \Crafty_ComponentSpec();
+        $spec   = new Crafty\ComponentSpec();
         
         $this
             ->boolean($spec->isShared())

@@ -1,11 +1,13 @@
 <?php
 
+namespace Knt\Crafty;
+
 /**
  * Spefication container for the Dependency Injection factory to operate.
  * @author Chris Corbyn
  * @package Crafty
  */
-class Crafty_ComponentSpec
+class ComponentSpec
 {
   
   /**

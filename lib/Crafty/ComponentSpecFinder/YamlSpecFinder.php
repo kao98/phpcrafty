@@ -1,5 +1,7 @@
 <?php
 
+namespace Knt\Crafty;
+
 require_once dirname(__FILE__) . '/ArraySpecFinder.php';
 require_once dirname(__FILE__) . '/../../Spyc.php';
 
@@ -8,8 +10,8 @@ require_once dirname(__FILE__) . '/../../Spyc.php';
  * @author Chris Corbyn
  * @package Crafty
  */
-class Crafty_ComponentSpecFinder_YamlSpecFinder
-  extends Crafty_ComponentSpecFinder_ArraySpecFinder
+class ComponentSpecFinder_YamlSpecFinder
+  extends ComponentSpecFinder_ArraySpecFinder
 {
   
   /**
@@ -18,7 +20,7 @@ class Crafty_ComponentSpecFinder_YamlSpecFinder
    */
   public function __construct($yaml)
   {
-    $array = Spyc::YAMLLoad($yaml);
+    $array = \Spyc::YAMLLoad($yaml);
     if (isset($array['components']) && is_array($array['components']))
     {
       $array = $array['components'];

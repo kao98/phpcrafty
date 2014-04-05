@@ -1,14 +1,18 @@
 <?php
 
-namespace tests\unit;
+namespace Knt\Crafty\tests\unit;
 
 require_once(__DIR__ . '/AbstractSpecFinder.php');
 require_once('../../lib/Crafty/ComponentSpecFinder/XmlSpecFinder.php');
 
-class Crafty_ComponentSpecFinder_XmlSpecFinder extends Crafty_ComponentSpecFinder_AbstractSpecFinder {
+use 
+    Knt\Crafty
+;
+
+class ComponentSpecFinder_XmlSpecFinder extends ComponentSpecFinder_AbstractSpecFinder {
 
     public function getFactory() {
-        return new \Crafty_ComponentFactory();
+        return new Crafty\ComponentFactory();
     }
     
     public function getFinder() {
@@ -62,7 +66,7 @@ class Crafty_ComponentSpecFinder_XmlSpecFinder extends Crafty_ComponentSpecFinde
             '  </component>' .
             '</components>';
 
-        return new \Crafty_ComponentSpecFinder_XmlSpecFinder($xml);
+        return new Crafty\ComponentSpecFinder_XmlSpecFinder($xml);
     }
 
 }

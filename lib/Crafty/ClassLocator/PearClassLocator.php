@@ -1,5 +1,7 @@
 <?php
 
+namespace Knt\Crafty\ClassLocator;
+
 require_once dirname(__FILE__) . '/../ClassLocator.php';
 
 /**
@@ -7,7 +9,7 @@ require_once dirname(__FILE__) . '/../ClassLocator.php';
  * @author Chris Corbyn
  * @package Crafty
  */
-class Crafty_ClassLocator_PearClassLocator implements Crafty_ClassLocator
+class PearClassLocator implements \Knt\Crafty\ClassLocator\ClassLocatorInterface
 {
   
   /**

@@ -1,5 +1,7 @@
 <?php
 
+namespace Knt\Crafty;
+
 require_once dirname(__FILE__) . '/ComponentFactory.php';
 
 /**
@@ -7,7 +9,7 @@ require_once dirname(__FILE__) . '/ComponentFactory.php';
  * @author Chris Corbyn
  * @package Crafty
  */
-interface Crafty_ComponentSpecFinder
+interface ComponentSpecFinder
 {
   
   /**
@@ -17,6 +19,6 @@ interface Crafty_ComponentSpecFinder
    * @param Crafty_ComponentFactory The factory currently instantiated
    * @return Crafty_ComponentSpec
    */
-  public function findSpecFor($componentName, Crafty_ComponentFactory $factory);
+  public function findSpecFor($componentName, ComponentFactory $factory);
   
 }

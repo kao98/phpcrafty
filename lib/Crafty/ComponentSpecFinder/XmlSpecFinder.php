@@ -1,5 +1,7 @@
 <?php
 
+namespace Knt\Crafty;
+
 require_once dirname(__FILE__) . '/../ComponentFactory.php';
 require_once dirname(__FILE__) . '/../ComponentFactoryException.php';
 require_once dirname(__FILE__) . '/../ComponentSpecFinder.php';
@@ -9,8 +11,8 @@ require_once dirname(__FILE__) . '/../ComponentSpecFinder.php';
  * @author Chris Corbyn
  * @package Crafty
  */
-class Crafty_ComponentSpecFinder_XmlSpecFinder
-  implements Crafty_ComponentSpecFinder
+class ComponentSpecFinder_XmlSpecFinder
+  implements ComponentSpecFinder
 {
   
   /**
@@ -40,7 +42,7 @@ class Crafty_ComponentSpecFinder_XmlSpecFinder
    * @param SimpleXMLElement $element
    * @return mixed
    */
-  private function _valueOf(SimpleXMLElement $element)
+  private function _valueOf(\SimpleXMLElement $element)
   {
     $strValue = (string) $element;
     switch (strtolower((string) $this->_firstNode($element->xpath('./@type'))))
@@ -64,12 +66,12 @@ class Crafty_ComponentSpecFinder_XmlSpecFinder
    * into a variable $v passed by-reference.
    * Returns true if anything is set, or false if not.
    * @param SimpleXMLElement $element
-   * @param Crafty_ComponentFactory $factory
+   * @param ComponentFactory $factory
    * @param mixed &$v
    * @return boolean
    */
-  private function _setValueByReference(SimpleXMLElement $element,
-      Crafty_ComponentFactory $factory, &$v)
+  private function _setValueByReference(\SimpleXMLElement $element,
+      ComponentFactory $factory, &$v)
   {
     //Element contains a collection of values
     if ($collection = $this->_firstNode($element->xpath("./collection")))
@@ -114,10 +116,10 @@ class Crafty_ComponentSpecFinder_XmlSpecFinder
    * Try create the ComponentSpec for $componentName.
    * Returns NULL on failure.
    * @param string $componentName
-   * @param Crafty_ComponentFactory $factory
-   * @return Crafty_ComponentSpec
+   * @param ComponentFactory $factory
+   * @return ComponentSpec
    */
-  public function findSpecFor($componentName, Crafty_ComponentFactory $factory)
+  public function findSpecFor($componentName, ComponentFactory $factory)
   {
     //If a <component> element with this name is found
     if ($component = $this->_firstNode($this->_xml->xpath(
@@ -145,14 +147,14 @@ class Crafty_ComponentSpecFinder_XmlSpecFinder
           }
           else
           {
-            throw new Crafty_ComponentFactoryException(
+            throw new ComponentFactoryException(
               'Missing value(s) for property ' . $key . ' in component ' .
               $componentName);
           }
         }
         else
         {
-          throw new Crafty_ComponentFactoryException(
+          throw new ComponentFactoryException(
             'Missing <key> for property ' . $i . ' in component ' .
             $componentName);
         }
@@ -170,7 +172,7 @@ class Crafty_ComponentSpecFinder_XmlSpecFinder
         }
         else //Throw an Exception because it's not possible to know what to do
         {
-          throw new Crafty_ComponentFactoryException(
+          throw new ComponentFactoryException(
             'Failed getting value of constructor arg ' . $i . ' in component ' .
             $componentName);
         }

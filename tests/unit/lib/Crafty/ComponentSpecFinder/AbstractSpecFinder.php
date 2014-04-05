@@ -1,13 +1,18 @@
 <?php
 
-namespace tests\unit;
+
+namespace Knt\Crafty\tests\unit;
 
 require_once('../../lib/Crafty/ComponentSpec.php');
 require_once('../../lib/Crafty/ComponentFactory.php');
 
-use atoum;
+use 
+    atoum,
+    Knt\Crafty
+;
 
-abstract class Crafty_ComponentSpecFinder_AbstractSpecFinder extends atoum {
+
+abstract class ComponentSpecFinder_AbstractSpecFinder extends atoum {
 
     protected $_finder;
     protected $_factory;
@@ -25,7 +30,7 @@ abstract class Crafty_ComponentSpecFinder_AbstractSpecFinder extends atoum {
         $this
             
             ->object($spec)
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
             
             ->string($spec->getClassName())
                 ->isEqualTo('EmptyClass')
@@ -43,7 +48,7 @@ abstract class Crafty_ComponentSpecFinder_AbstractSpecFinder extends atoum {
         $this
             
             ->object($spec)
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
             
             ->string($spec->getClassName())
                 ->isEqualTo('stdClass')
@@ -64,18 +69,18 @@ abstract class Crafty_ComponentSpecFinder_AbstractSpecFinder extends atoum {
         $this
             
             ->object($spec)
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
             
             ->string($spec->getClassName())
                 ->isEqualTo('SetterInjectionClass')
             
             ->array($prop = $spec->getProperty('prop1'))
                 ->object($prop[0])
-                    ->isInstanceOf('Crafty_ComponentReference')
+                    ->isInstanceOf('\Knt\Crafty\ComponentReference')
                     ->string($prop[0]->getComponentName())
                         ->isEqualTo('empty')
                 ->object($prop[1])
-                    ->isInstanceOf('Crafty_ComponentReference')
+                    ->isInstanceOf('\Knt\Crafty\ComponentReference')
                     ->string($prop[1]->getComponentName())
                         ->isEqualTo('sharedComponent')
             ->string($spec->getProperty('prop2'))
@@ -95,7 +100,7 @@ abstract class Crafty_ComponentSpecFinder_AbstractSpecFinder extends atoum {
         $this
             
             ->object($spec)
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
             
             ->string($spec->getClassName())
                 ->isEqualTo('ConstructorInjectionClass')
@@ -122,7 +127,7 @@ abstract class Crafty_ComponentSpecFinder_AbstractSpecFinder extends atoum {
         $this
             
             ->object($spec)
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
             
             ->string($spec->getClassName())
                 ->isEqualTo('ConstructorInjectionClass')
@@ -146,7 +151,7 @@ abstract class Crafty_ComponentSpecFinder_AbstractSpecFinder extends atoum {
         $this
             
             ->object($spec)
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
             
             ->string($spec->getClassName())
                 ->isEqualTo('ConstructorInjectionClass')
@@ -170,7 +175,7 @@ abstract class Crafty_ComponentSpecFinder_AbstractSpecFinder extends atoum {
         $this
             
             ->object($spec)
-                ->isInstanceOf('Crafty_ComponentSpec')
+                ->isInstanceOf('\Knt\Crafty\ComponentSpec')
             
             ->string($spec->getClassName())
                 ->isEqualTo('ConstructorInjectionClass')
