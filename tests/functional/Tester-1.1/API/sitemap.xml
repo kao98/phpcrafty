@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>http://api.nette.org/2.0/index.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/namespace-PHP.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/namespace-Tester.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/namespace-Tester.CodeCoverage.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/namespace-Tester.Runner.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/namespace-Tester.Runner.Output.html</loc>
+</url>
+
+
+<url>
+	<loc>http://api.nette.org/2.0/Closure.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/SimpleXMLElement.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Assert.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.CodeCoverage.Collector.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.CodeCoverage.ReportGenerator.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.DataProvider.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.DomQuery.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Dumper.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Environment.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Helpers.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.CommandLine.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.Job.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.Output.ConsolePrinter.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.Output.Logger.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.Output.TapPrinter.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.PhpExecutable.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.Runner.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.TestHandler.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.TestCase.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.Runner.OutputHandler.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Traversable.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Exception.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.AssertException.html</loc>
+</url>
+<url>
+	<loc>http://api.nette.org/2.0/Tester.TestCaseException.html</loc>
+</url>
+</urlset>

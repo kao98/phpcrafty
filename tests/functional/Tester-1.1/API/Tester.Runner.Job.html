@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Tester\Runner\Job | Nette Tester 1.1 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette Tester 1.1 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Tester.html">Tester<span></span></a>
+						<ul>
+				<li><a href="namespace-Tester.CodeCoverage.html">CodeCoverage</a>
+						</li>
+				<li class="active"><a href="namespace-Tester.Runner.html">Runner<span></span></a>
+						<ul>
+				<li><a href="namespace-Tester.Runner.Output.html">Output</a>
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Tester.Runner.CommandLine.html">CommandLine</a></li>
+				<li class="active"><a href="Tester.Runner.Job.html">Job</a></li>
+				<li><a href="Tester.Runner.PhpExecutable.html">PhpExecutable</a></li>
+				<li><a href="Tester.Runner.Runner.html">Runner</a></li>
+				<li><a href="Tester.Runner.TestHandler.html">TestHandler</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Tester.Runner.OutputHandler.html">OutputHandler</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Tester.Runner.html" title="Summary of Tester\Runner"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Job</h1>
+
+
+	<div class="description">
+	
+<p>Single test job.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Tester.html">Tester</a>\<a href="namespace-Tester.Runner.html">Runner</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Runner.Job.php.html#13-183" title="Go to source code">Runner/Job.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-Runner.Job.php.html#55-64" title="Go to source code">__construct</a>( <span>string <var>$testFile</var></span>, <span><code><a href="Tester.Runner.PhpExecutable.html">Tester\Runner\PhpExecutable</a></code> <var>$php</var></span>, <span> <var>$args</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$testFile</var></dt>
+					<dd><code>string</code><br>test file name</dd>
+					<dt><var>$php</var></dt>
+					<dd></dd>
+					<dt><var>$args</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="run" id="_run">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_run">#</a>
+		<code><a href="source-Runner.Job.php.html#67-98" title="Go to source code">run</a>( <span>boolean <var>$blocking</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Runs single test.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Runs single test.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$blocking</var></dt>
+					<dd><code>boolean</code><br>wait till process ends</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isRunning" id="_isRunning">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isRunning">#</a>
+		<code><a href="source-Runner.Job.php.html#101-131" title="Go to source code">isRunning</a>( )</code>
+
+		<div class="description short">
+			
+<p>Checks if the test is still running.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks if the test is still running.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFile" id="_getFile">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFile">#</a>
+		<code><a href="source-Runner.Job.php.html#134-141" title="Go to source code">getFile</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns test file path.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns test file path.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getArguments" id="_getArguments">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getArguments">#</a>
+		<code><a href="source-Runner.Job.php.html#144-151" title="Go to source code">getArguments</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns script arguments.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns script arguments.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getExitCode" id="_getExitCode">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getExitCode">#</a>
+		<code><a href="source-Runner.Job.php.html#154-161" title="Go to source code">getExitCode</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns exit code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns exit code.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOutput" id="_getOutput">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOutput">#</a>
+		<code><a href="source-Runner.Job.php.html#164-171" title="Go to source code">getOutput</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns test output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns test output.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaders" id="_getHeaders">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaders">#</a>
+		<code><a href="source-Runner.Job.php.html#174-181" title="Go to source code">getHeaders</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns output headers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns output headers.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="CODE_NONE" id="CODE_NONE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Runner.Job.php.html#21" title="Go to source code"><b>CODE_NONE</b></a>
+		</code></td>
+		<td class="value"><code>-<span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#CODE_NONE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CODE_OK" id="CODE_OK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Runner.Job.php.html#22" title="Go to source code"><b>CODE_OK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#CODE_OK" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CODE_SKIP" id="CODE_SKIP">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Runner.Job.php.html#23" title="Go to source code"><b>CODE_SKIP</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">177</span></code></td>
+		<td class="description"><div>
+			<a href="#CODE_SKIP" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CODE_FAIL" id="CODE_FAIL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Runner.Job.php.html#24" title="Go to source code"><b>CODE_FAIL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">178</span></code></td>
+		<td class="description"><div>
+			<a href="#CODE_FAIL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CODE_ERROR" id="CODE_ERROR">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Runner.Job.php.html#25" title="Go to source code"><b>CODE_ERROR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">255</span></code></td>
+		<td class="description"><div>
+			<a href="#CODE_ERROR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RUN_USLEEP" id="RUN_USLEEP">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Runner.Job.php.html#27-28" title="Go to source code"><b>RUN_USLEEP</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">10000</span></code></td>
+		<td class="description"><div>
+			<a href="#RUN_USLEEP" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>waiting time between process activity check in microseconds</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>waiting time between process activity check in microseconds</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette Tester 1.1 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2564053554"></script>
+</body>
+</html>
