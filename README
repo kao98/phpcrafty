@@ -4,3 +4,6 @@ Original sources are available on sourceforge.
 
 http://phpcrafty.sourceforge.net/
 http://sourceforge.net/projects/phpcrafty/
+
+2014-04-05: 
+ - unit tests have been translated from simpletest to atoum. Nothing more than a translation for now.
