@@ -1,4 +1,3 @@
-#!/usr/bin/env php ./Tester-1.1/Tester/tester
 <?php
 
 /* 
