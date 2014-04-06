@@ -1,18 +1,17 @@
 <?php
 
 
-namespace Knt\Crafty\tests\unit;
+namespace Knt\Crafty\ComponentSpecFinder\tests\unit;
 
 require_once('../../lib/Crafty/ComponentSpec.php');
 require_once('../../lib/Crafty/ComponentFactory.php');
 
 use 
-    atoum,
-    Knt\Crafty
+    atoum
 ;
 
 
-abstract class ComponentSpecFinder_AbstractSpecFinder extends atoum {
+abstract class AbstractSpecFinder extends atoum {
 
     protected $_finder;
     protected $_factory;

@@ -66,7 +66,7 @@ class yamlTest extends Tester\TestCase {
     
     //Given
         $crafty = new Crafty\ComponentFactory;
-        $spec   = new Crafty\ComponentSpecFinder_YamlSpecFinder(__DIR__ . '/configuration.yml');
+        $spec   = new Crafty\ComponentSpecFinder\YamlSpecFinder(__DIR__ . '/configuration.yml');
         
         $crafty ->registerSpecFinder('yamlFinder', $spec);
         

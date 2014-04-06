@@ -1,18 +1,18 @@
 <?php
 
-namespace Knt\Crafty;
+namespace Knt\Crafty\ComponentSpecFinder;
 
 require_once dirname(__FILE__) . '/../ComponentFactory.php';
 require_once dirname(__FILE__) . '/../ComponentFactoryException.php';
-require_once dirname(__FILE__) . '/../ComponentSpecFinder.php';
+require_once dirname(__FILE__) . '/ComponentSpecFinderInterface.php';
 
 /**
  * A ComponentSpecFinder which reads from a XML file or markup.
  * @author Chris Corbyn
  * @package Crafty
  */
-class ComponentSpecFinder_XmlSpecFinder
-  implements ComponentSpecFinder
+class XmlSpecFinder
+  implements ComponentSpecFinderInterface
 {
   
   /**
@@ -71,7 +71,7 @@ class ComponentSpecFinder_XmlSpecFinder
    * @return boolean
    */
   private function _setValueByReference(\SimpleXMLElement $element,
-      ComponentFactory $factory, &$v)
+      \Knt\Crafty\ComponentFactory $factory, &$v)
   {
     //Element contains a collection of values
     if ($collection = $this->_firstNode($element->xpath("./collection")))
@@ -119,7 +119,7 @@ class ComponentSpecFinder_XmlSpecFinder
    * @param ComponentFactory $factory
    * @return ComponentSpec
    */
-  public function findSpecFor($componentName, ComponentFactory $factory)
+  public function findSpecFor($componentName, \Knt\Crafty\ComponentFactory $factory)
   {
     //If a <component> element with this name is found
     if ($component = $this->_firstNode($this->_xml->xpath(

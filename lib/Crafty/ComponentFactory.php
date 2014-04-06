@@ -5,7 +5,7 @@ namespace Knt\Crafty;
 require_once dirname(__FILE__) . '/ClassLocator/ClassLocatorInterface.php';
 require_once dirname(__FILE__) . '/ComponentReference.php';
 require_once dirname(__FILE__) . '/ComponentSpec.php';
-require_once dirname(__FILE__) . '/ComponentSpecFinder.php';
+require_once dirname(__FILE__) . '/ComponentSpecFinder/ComponentSpecFinderInterface.php';
 require_once dirname(__FILE__) . '/ComponentFactoryException.php';
 require_once dirname(__FILE__) . '/ComponentReflector.php';
 
@@ -133,7 +133,7 @@ class ComponentFactory
    * @param string $key
    * @param ComponentSpecFinder The spec finder instance
    */
-  public function registerSpecFinder($key, ComponentSpecFinder $finder)
+  public function registerSpecFinder($key, \Knt\Crafty\ComponentSpecFinder\ComponentSpecFinderInterface $finder)
   {
     $this->_specFinders[$key] = $finder;
   }

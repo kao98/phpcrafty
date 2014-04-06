@@ -1,6 +1,6 @@
 <?php
 
-namespace Knt\Crafty;
+namespace Knt\Crafty\ComponentSpecFinder;
 
 require_once dirname(__FILE__) . '/ArraySpecFinder.php';
 require_once dirname(__FILE__) . '/../../Spyc.php';
@@ -10,8 +10,8 @@ require_once dirname(__FILE__) . '/../../Spyc.php';
  * @author Chris Corbyn
  * @package Crafty
  */
-class ComponentSpecFinder_YamlSpecFinder
-  extends ComponentSpecFinder_ArraySpecFinder
+class YamlSpecFinder
+  extends ArraySpecFinder
 {
   
   /**

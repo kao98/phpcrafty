@@ -1,17 +1,17 @@
 <?php
 
-namespace Knt\Crafty;
+namespace Knt\Crafty\ComponentSpecFinder;
 
 require_once dirname(__FILE__) . '/../ComponentFactory.php';
-require_once dirname(__FILE__) . '/../ComponentSpecFinder.php';
+require_once dirname(__FILE__) . '/ComponentSpecFinderInterface.php';
 
 /**
  * A ComponentSpecFinder which reads from a complex array.
  * @author Chris Corbyn
  * @package Crafty
  */
-class ComponentSpecFinder_ArraySpecFinder
-  implements ComponentSpecFinder
+class ArraySpecFinder
+  implements ComponentSpecFinderInterface
 {
   
   /**
@@ -55,7 +55,7 @@ class ComponentSpecFinder_ArraySpecFinder
    * @param ComponentFactory $factory
    * @return array
    */
-  private function _flatten(array $input, ComponentFactory $factory)
+  private function _flatten(array $input, \Knt\Crafty\ComponentFactory $factory)
   {
     $ret = array();
     foreach ($input as $k => $v)
@@ -109,7 +109,7 @@ class ComponentSpecFinder_ArraySpecFinder
    * @param ComponentFactory $factory
    * @return ComponentSpec
    */
-  public function findSpecFor($componentName, ComponentFactory $factory)
+  public function findSpecFor($componentName, \Knt\Crafty\ComponentFactory $factory)
   {
     //Look for component in the array
     if (isset($this->_list[$componentName]))

@@ -329,9 +329,9 @@ class ComponentFactory extends atoum {
         $spec = $this->_factory->newComponentSpec();
         $spec->setClassName('stdClass');
         
-        $finder1 = new \mock\Knt\Crafty\ComponentSpecFinder;
-        $finder2 = new \mock\Knt\Crafty\ComponentSpecFinder;
-        $finder3 = new \mock\Knt\Crafty\ComponentSpecFinder;
+        $finder1 = new \mock\Knt\Crafty\ComponentSpecFinder\ComponentSpecFinderInterface;
+        $finder2 = new \mock\Knt\Crafty\ComponentSpecFinder\ComponentSpecFinderInterface;
+        $finder3 = new \mock\Knt\Crafty\ComponentSpecFinder\ComponentSpecFinderInterface;
         
         $finder1->getMockController()->findSpecFor = null;
         $finder2->getMockController()->findSpecFor = $spec;

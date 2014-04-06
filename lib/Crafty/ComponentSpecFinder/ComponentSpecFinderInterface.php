@@ -1,15 +1,15 @@
 <?php
 
-namespace Knt\Crafty;
+namespace Knt\Crafty\ComponentSpecFinder;
 
-require_once dirname(__FILE__) . '/ComponentFactory.php';
+require_once dirname(__FILE__) . '/../ComponentFactory.php';
 
 /**
  * A ComponentSpec finding interface when no such component is registered.
  * @author Chris Corbyn
  * @package Crafty
  */
-interface ComponentSpecFinder
+interface ComponentSpecFinderInterface
 {
   
   /**
@@ -19,6 +19,6 @@ interface ComponentSpecFinder
    * @param Crafty_ComponentFactory The factory currently instantiated
    * @return Crafty_ComponentSpec
    */
-  public function findSpecFor($componentName, ComponentFactory $factory);
+  public function findSpecFor($componentName, \Knt\Crafty\ComponentFactory $factory);
   
 }
