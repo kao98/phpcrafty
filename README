@@ -1,9 +1,18 @@
-This is a fork of Crafty, a php dependency injector.
+# *Knt-Crafty*
 
-Original sources are available on sourceforge.
+## A php dependency injector
 
-http://phpcrafty.sourceforge.net/
-http://sourceforge.net/projects/phpcrafty/
+This is a fork of [Crafty](http://phpcrafty.sourceforge.net/), a php dependency injector.
 
-2014-04-05: 
- - unit tests have been translated from simpletest to atoum. Nothing more than a translation for now.
+[Original sources](http://sourceforge.net/projects/phpcrafty/) are available on [sourceforge](http://sourceforge.net/).
+
+## Work in progress
+
+For now, the work is in progress and nothing has been specified nor fully tested yet.
+
+What has been accomplished now:
+
+ * Translation of existing tests from SimpleTest to [Atoum](http://www.atoum.org)
+ * Creation of some functional tests using [Nette Tester](http://tester.nette.org/)
+ * Using `Knt\Crafty` namespaces instead of `Crafty_` prefixes
+ * Addition of a default autoloader and a single entry point for the library: Knt/Crafty/Crafty.php
