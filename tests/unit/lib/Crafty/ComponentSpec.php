@@ -2,7 +2,7 @@
 
 namespace Knt\Crafty\tests\unit;
 
-require_once('../../lib/Crafty/ComponentSpec.php');
+require_once('../../lib/Crafty/Crafty.php');
 
 use 
     atoum,

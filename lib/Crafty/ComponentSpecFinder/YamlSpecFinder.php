@@ -2,7 +2,6 @@
 
 namespace Knt\Crafty\ComponentSpecFinder;
 
-require_once dirname(__FILE__) . '/ArraySpecFinder.php';
 require_once dirname(__FILE__) . '/../../Spyc.php';
 
 /**

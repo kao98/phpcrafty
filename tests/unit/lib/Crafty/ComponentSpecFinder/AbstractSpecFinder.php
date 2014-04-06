@@ -3,8 +3,7 @@
 
 namespace Knt\Crafty\ComponentSpecFinder\tests\unit;
 
-require_once('../../lib/Crafty/ComponentSpec.php');
-require_once('../../lib/Crafty/ComponentFactory.php');
+require_once('../../lib/Crafty/Crafty.php');
 
 use 
     atoum

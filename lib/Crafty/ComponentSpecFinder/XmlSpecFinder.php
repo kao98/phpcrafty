@@ -2,10 +2,6 @@
 
 namespace Knt\Crafty\ComponentSpecFinder;
 
-require_once dirname(__FILE__) . '/../ComponentFactory.php';
-require_once dirname(__FILE__) . '/../ComponentFactoryException.php';
-require_once dirname(__FILE__) . '/ComponentSpecFinderInterface.php';
-
 /**
  * A ComponentSpecFinder which reads from a XML file or markup.
  * @author Chris Corbyn

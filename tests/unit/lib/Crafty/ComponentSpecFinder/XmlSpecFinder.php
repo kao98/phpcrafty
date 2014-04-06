@@ -3,7 +3,6 @@
 namespace Knt\Crafty\ComponentSpecFinder\tests\unit;
 
 require_once(__DIR__ . '/AbstractSpecFinder.php');
-require_once('../../lib/Crafty/ComponentSpecFinder/XmlSpecFinder.php');
 
 use 
     Knt\Crafty

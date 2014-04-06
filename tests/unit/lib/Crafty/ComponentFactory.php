@@ -2,7 +2,8 @@
 
 namespace Knt\Crafty\tests\unit;
 
-require_once('../../lib/Crafty/ComponentFactory.php');
+require_once('../../lib/Crafty/Crafty.php');
+
 require_once(__DIR__ . '/_fakes/EmptyClass.php');
 require_once(__DIR__ . '/_fakes/ConstructorInjectionClass.php');
 require_once(__DIR__ . '/_fakes/SetterInjectionClass.php');

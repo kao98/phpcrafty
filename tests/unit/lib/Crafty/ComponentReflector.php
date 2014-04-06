@@ -2,7 +2,8 @@
 
 namespace Knt\Crafty\tests\unit;
 
-require_once('../../lib/Crafty/ComponentReflector.php');
+require_once('../../lib/Crafty/Crafty.php');
+
 require_once(__DIR__ . '/_fakes/HybridInjectionClass.php');
 
 use 

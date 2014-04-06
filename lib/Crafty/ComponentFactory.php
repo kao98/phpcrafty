@@ -2,13 +2,6 @@
 
 namespace Knt\Crafty;
 
-require_once dirname(__FILE__) . '/ClassLocator/ClassLocatorInterface.php';
-require_once dirname(__FILE__) . '/ComponentReference.php';
-require_once dirname(__FILE__) . '/ComponentSpec.php';
-require_once dirname(__FILE__) . '/ComponentSpecFinder/ComponentSpecFinderInterface.php';
-require_once dirname(__FILE__) . '/ComponentFactoryException.php';
-require_once dirname(__FILE__) . '/ComponentReflector.php';
-
 /**
  * A factory class for the dependency injection container.
  * Reads from specifications for components and creates configured instances
