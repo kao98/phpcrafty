@@ -22,4 +22,5 @@ For now, nothing has been specified nor fully tested.
  * More functional tests
  * *Real* unit tests
 
-Wan't to take a look? Look at `tests/functional/Crafty/00 - Basic Usage` ;-).
+
+Wan't to take a look? Start at `tests/functional/Crafty/00 - Basic Usage` ;-).
