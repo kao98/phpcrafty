@@ -18,7 +18,7 @@
 
 /*
  * Functional tests use Nette Tester v1.1.
- * The Nette Tester is provided in it 1.1.0 version.
+ * The Nette Tester is provided in its 1.1.0 version.
  * To run the tests, from the 'tests/functional' directory,
  * simply run the following command:
  * #>php Tester-1.1/Tester/tester Crafty
