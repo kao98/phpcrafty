@@ -1,0 +1,5 @@
+## Exactly as for the simplest test,
+## we instanciate stdClass when we ask for the creation of a 'std' object.
+components:
+    std:
+        className: stdClass
