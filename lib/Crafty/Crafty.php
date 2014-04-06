@@ -32,18 +32,22 @@ if (!class_exists('\Knt\Crafty\ComponentFactory', true)) {
 
     spl_autoload_register(function ($className) {
 
-        if (strpos($className, 'Knt\Crafty') === false) return false;
+        if (strpos($className, 'Knt\Crafty') === false) {
+            return false;
+        }
 
         $fileName = 
+            __DIR__
+            .
             str_replace('\\', '/',
-                str_replace('Knt\Crafty', '', 
-                    ltrim($className, '\\')
-                )
+                str_replace('Knt\Crafty', '', $className)
             )
+            .
+            '.php'
         ;
 
-        if (file_exists(__DIR__ . "/$fileName.php")) {
-            require __DIR__ . "/$fileName.php";
+        if (file_exists($fileName)) {
+            require $fileName;
             return true;
         }
 
