@@ -19,7 +19,7 @@
 /*
  * Crafty.php: entry point. 
  * This should be the only file included in a non-autoload context.
- * It will actualy register its own autoloader just decicated to Crafty.
+ * It will actualy register its own autoloader just dedicated to Crafty.
  */
 
 namespace Knt\Crafty;
@@ -38,17 +38,15 @@ if (!class_exists('\Knt\Crafty\ComponentFactory', true)) {
 
         $fileName = 
             __DIR__
-            .
-            str_replace('\\', '/',
+            .str_replace('\\', '/',
                 str_replace('Knt\Crafty', '', $className)
             )
-            .
-            '.php'
+            .'.php'
         ;
 
         if (file_exists($fileName)) {
             require $fileName;
-            return true;
+            return  true;
         }
 
         return false;
