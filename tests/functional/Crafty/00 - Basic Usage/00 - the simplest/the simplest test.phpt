@@ -12,7 +12,7 @@
  * 
  * Original project: http://sourceforge.net/projects/phpcrafty/
  * 
- * @link          http://www.kaonet-fr.net/cms
+ * @link          http://www.kaonet-fr.net/
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
